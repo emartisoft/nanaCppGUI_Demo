@@ -11,7 +11,7 @@ int __stdcall WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, char*, int n
 	
 	// Thanks to Error Flynn from Nana C++ Library Forum
 	wstring app_path(4096, '\0');
-	app_path.resize(GetModuleFileNameW(0, &app_path.front(), app_path.size()));
+	app_path.resize(GetModuleFileNameW(0, &app_path.front(), (DWORD)app_path.size()));
 	mainForm.icon(paint::image(app_path));
 	// End of thanks :)
 	
